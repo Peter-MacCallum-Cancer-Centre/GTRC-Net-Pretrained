@@ -9,7 +9,7 @@ git lfs clone https://github.com/Peter-MacCallum-Cancer-Centre/GTRC-Net-Pretrain
 For inference with pre-trained models, use GTRC.py (command line inference) and GTRC_Infer.py (python scriptable)
 Scripts 00_*.py-06_*.py are for training based on previously segmented image data and can be ignored if using pre-trained weights. 
 
-Tested on widnwos with Python version 3.11 and Nvidia 1070 8Gb (laptop) and A4000 16GB (desktop) GPUs.
+Tested on windows with Python version 3.11 and Nvidia 1070 8Gb (laptop) and A4000 16GB (desktop) GPUs.
 
 Installation (Win)
 Download source to project location (ex C:\GTRC\)

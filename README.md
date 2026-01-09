@@ -34,6 +34,7 @@ Command to test installation on DEEP-PSMA sample case once downloaded
 More specific example command:
 ```
 python GTRC.py --ct sample_data\train_0001\PSMA\CT.nii.gz --pet sample_data\train_0001\PSMA\PET.nii.gz --tracer psma_pet --output psma_test.nii.gz --suv_threshold 3.5 -f 0
-will run inference on the sample PSMA PET using a threshold of 3.5 and fold 0 of the nnU-net and classification models.
 ```
+will run inference on the sample PSMA PET using a threshold of 3.5 and fold 0 of the nnU-net and classification models.
+
 For scripting purposes, the inference command can be called from the function in GTRC_Infer.py file ("run_gtrc_infer(...)"). 

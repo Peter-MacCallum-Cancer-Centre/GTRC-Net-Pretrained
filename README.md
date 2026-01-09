@@ -13,8 +13,8 @@ Tested on windows with Python version 3.11 and Nvidia A4000 16GB (desktop) GPUs 
 
 Installation (Win) - 
 
-Download source to project location (ex C:\GTRC\)
-Best to Create virtual Environment for AI backend compatibility issues (pytorch, nnunet, tensorflow)
+Download source to project location (ex C:\GTRC\).
+Best to Create virtual Environment for AI backend compatibility issues (pytorch, nnunet, tensorflow):
 ```
 python -m venv [path to virtual environment folder (ex C:\GTRC\GTRC_venv)]
 #Activate the environment and configure environment

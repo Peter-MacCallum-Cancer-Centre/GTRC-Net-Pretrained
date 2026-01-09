@@ -1,7 +1,8 @@
 Pre-trained weights for segmentation of total tumor burden (TTB) in metastatic prostate cancer imaging with PSMA PET/CT, FDG PET/CT, and LuPSMA SPECT/CT
 Models trained on all cases in JNM manuscript but retrained to omit cases including in hidden test data for DEEP-PSMA Grand Challenge. Overall performance should be very similar to manuscript report.
 
-Scripts 00_*.py-06_*.py are for training based on segmented image data. For inference with pre-trained models, use GTRC.py (command line inference) and GTRC_Infer.py (python scriptable)
+For inference with pre-trained models, use GTRC.py (command line inference) and GTRC_Infer.py (python scriptable)
+Scripts 00_*.py-06_*.py are for training based on previously segmented image data and can be ignored if using pre-trained weights. 
 
 Tested with Python version 3.11
 
@@ -35,4 +36,4 @@ More specific example command:
 python GTRC.py --ct sample_data\train_0001\PSMA\CT.nii.gz --pet sample_data\train_0001\PSMA\PET.nii.gz --tracer psma_pet --output psma_test.nii.gz --suv_threshold 3.5 -f 0
 will run inference on the sample PSMA PET using a threshold of 3.5 and fold 0 of the nnU-net and classification models.
 ```
-For scripting purposes, the inference command can be called from the function in GTRC_Infer.py file. 
+For scripting purposes, the inference command can be called from the function in GTRC_Infer.py file ("run_gtrc_infer(...)"). 

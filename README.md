@@ -36,6 +36,8 @@ Command to test installation on DEEP-PSMA sample case once downloaded
 python GTRC.py --test 
 ```
 
+If successful there should now be TTB niftis for each of the sample PSMA and FDG PET/CTs located in the sample_data\train_0001 folder
+
 More specific example command:
 ```
 python GTRC.py --ct sample_data\train_0001\PSMA\CT.nii.gz --pet sample_data\train_0001\PSMA\PET.nii.gz --tracer psma_pet --output psma_test.nii.gz --suv_threshold 3.5 -f 0

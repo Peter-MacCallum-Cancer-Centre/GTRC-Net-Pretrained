@@ -1,7 +1,7 @@
 Pre-trained weights for segmentation of total tumor burden (TTB) in metastatic prostate cancer imaging with PSMA PET/CT, FDG PET/CT, and LuPSMA SPECT/CT
 Models trained on all cases in JNM manuscript but retrained to omit cases including in hidden test data for DEEP-PSMA Grand Challenge. Overall performance should be very similar to manuscript report.
 
-To download with model weights, need git large file storage (lfs) from command line:
+To download with model weights, use git large file storage (lfs) from command line:
 ```
 git lfs clone https://github.com/Peter-MacCallum-Cancer-Centre/GTRC-Net-Pretrained.git
 ```

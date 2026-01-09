@@ -11,7 +11,8 @@ Scripts 00_*.py-06_*.py are for training based on previously segmented image dat
 
 Tested on windows with Python version 3.11 and Nvidia A4000 16GB (desktop) GPUs and 1070 8Gb (laptop) GPUs. On sample cases, processing time per scan is ~3min on desktop (A4000) and 10min laptop (1070).
 
-Installation (Win)
+Installation (Win) - 
+
 Download source to project location (ex C:\GTRC\)
 Best to Create virtual Environment for AI backend compatibility issues (pytorch, nnunet, tensorflow)
 ```

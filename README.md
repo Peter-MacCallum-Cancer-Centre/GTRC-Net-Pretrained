@@ -1,6 +1,8 @@
 Pre-trained weights for segmentation of total tumor burden (TTB) in metastatic prostate cancer imaging with PSMA PET/CT, FDG PET/CT, and LuPSMA SPECT/CT
 Models trained on all cases in JNM manuscript but retrained to omit cases including in hidden test data for DEEP-PSMA Grand Challenge. Overall performance should be very similar to manuscript report.
 
+Scripts 00_*.py-06_*.py are for training based on segmented image data. For inference with pre-trained models, use GTRC.py (command line inference) and GTRC_Infer.py (python scriptable)
+
 Tested with Python version 3.11
 
 Installation (Win)

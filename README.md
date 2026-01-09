@@ -29,7 +29,7 @@ This may take 15-20 minutes to complete. The inference requires a system call to
 To test functionality, a sample case from the DEEP-PSMA Dataset is available at https://zenodo.org/records/18150034
 https://zenodo.org/records/18150034/files/train_0001.zip?download=1
 
-This will contain one PSMA and FDG scan in nifti format for testing inference functionality. 
+This will contain one PSMA and FDG scan in nifti format for testing inference functionality. Extract to a folder "sample_data\train_001\"
 
 Command to test installation on DEEP-PSMA sample case once downloaded
 ```

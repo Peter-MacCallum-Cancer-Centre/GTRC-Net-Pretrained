@@ -24,6 +24,21 @@ python -m pip install --upgrade pip
 #install pip requirements
 pip install -r C:\GTRC\requirements.txt
 ```
+
+Installation (Linux) - 
+
+Download source to project location (ex /home/user/GTRC).
+Best to Create virtual Environment for AI backend compatibility issues (pytorch, nnunet, tensorflow):
+```
+python -m venv [path to virtual environment folder (ex /home/user/GTRC/GTRC_venv)]
+#Activate the environment and configure environment
+source /home/user/GTRC/GTRC_venv/bin/activate
+#update pip
+python -m pip install --upgrade pip
+#install pip requirements
+pip install -r /home/user/GTRC/requirements.txt
+```
+
 This may take 15-20 minutes to complete. The inference requires a system call to the installed "nnUNetv2_predict" script/application. By default on windows this will be in the Scripts\ folder of your virtual environment location (eg C:\GTRC\GTRC_venv\Scripts\nnUNetv2_predict.exe). On linux the location will be different and may involve calling the virtual environment python binary followed by a path to the nnunet predict.py script located in the module’s lib/site-packages subfolder.) If you need to alter the location of this call, modify GTRC’s GTRC_Infer.py script to change the variable ‘nn_predict_exe’ to the appropriate location at line 26 of GTRC_Infer.py. Whatever that variable is will be the preamble to the system call. If any issues, troubleshoot by checking that the path in that variable yields an output of the nnUNet_predict helpfile when entered into the command line from your GTRC working directory.
 
 

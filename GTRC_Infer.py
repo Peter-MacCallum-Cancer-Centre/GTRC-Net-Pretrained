@@ -23,7 +23,9 @@ consensus classifier models for each tracer).
 
 nn_predict_exe='nnUNetv2_predict' #if not available in %PATH update to appropriate location
 ##nn_predict_exe=r"D:\path\to\python\Scripts\nnUNetv2_predict.exe" #example in virtual environment...
+##nn_predict_exe=r"/home/user/GTRC/GTRC_venv/bin/nnUNetv2_predict" #default for linux example install
 nn_predict_exe=r"C:\GTRC\GTRC_venv\Scripts\nnUNetv2_predict.exe" #default from windows github example install
+
 
 def expand_contract_label(label,distance=5.0):
     """expand or contract sitk label image by distance indicated.
@@ -226,25 +228,5 @@ def run_gtrc_infer(pt,ct,tracer='psma_pet',suv_threshold=3.0,output_fname='gtrc_
 ##                   return_ttb_sitk=True,
 ##                   fold='all',suv_threshold=suv_threshold)
     
-##ct_fname=r"W:\DEEP-PSMA\CHALLENGE_DATA\train_0001\PSMA\CT.nii.gz"
-##pt_fname=r"W:\DEEP-PSMA\CHALLENGE_DATA\train_0001\PSMA\PET.nii.gz"
-##suv_threshold=3.0
-##
-##ttb=run_gtrc_infer(pt_fname,ct_fname,tracer='psma_pet',output_fname="psma_ttb.nii.gz",
-##                   return_ttb_sitk=True,
-##                   fold='all',suv_threshold=suv_threshold)
-##ct_fname=r"W:\DEEP-PSMA\CHALLENGE_DATA\train_0001\FDG\CT.nii.gz"
-##pt_fname=r"W:\DEEP-PSMA\CHALLENGE_DATA\train_0001\FDG\PET.nii.gz"
-##suv_threshold=2.9650267106980
-##
-##ttb=run_gtrc_infer(pt_fname,ct_fname,tracer='fdg_pet',output_fname="fdg_ttb.nii.gz",
-##                   return_ttb_sitk=True,
-##                   fold='all',suv_threshold=suv_threshold)
 
 
-##ct_fname=r"F:\Serial_PSMA_Imaging\james_ttb_structures_2024\image_niis\lu177_psma\1.2.840.113564.99.1.345051433421.8.20171020102529807.183883.2\ct.nii.gz"
-##pt_fname=r"F:\Serial_PSMA_Imaging\james_ttb_structures_2024\image_niis\lu177_psma\1.2.840.113564.99.1.345051433421.8.20171020102529807.183883.2\pt_suv.nii.gz"
-##suv_threshold=3.0
-##ttb=run_gtrc_infer(pt_fname,ct_fname,tracer='lupsma_spect',output_fname="lupsma_ttb.nii.gz",
-##                   return_ttb_sitk=True,
-##                   fold='all',suv_threshold=suv_threshold)

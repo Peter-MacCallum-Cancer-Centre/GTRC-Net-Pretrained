@@ -48,28 +48,28 @@ if not run_test:
 
 if run_test:
     from GTRC_Infer import run_gtrc_infer
-    print('Running Test Inference on DEEP-PSMA Sample Data (train_0001)')
-    print('output segmentation files should appear in sample_data\psma_ttb.nii.gz and sample_data\fdg_ttb.nii.gz')
+    print(r'Running Test Inference on DEEP-PSMA Sample Data (train_0001)')
+    print(r'output segmentation files should appear in sample_data\psma_ttb.nii.gz and sample_data\fdg_ttb.nii.gz')
 
-    ct_fname=r"sample_data\train_0001\PSMA\CT.nii.gz"
-    pt_fname=r"sample_data\train_0001\PSMA\PET.nii.gz"
+    ct_fname=r"sample_data/train_0001/PSMA/CT.nii.gz"
+    pt_fname=r"sample_data/train_0001/PSMA/PET.nii.gz"
     suv_threshold=3.0
 
     if not os.path.exists(ct_fname):
-        print('Missing sample datafiles, download and extract from https://zenodo.org/records/18150034')
-        print('Direct link: https://zenodo.org/records/18150034/files/train_0001.zip?download=1')
-        print('Image data should be located in sample_data\train_0001\PSMA\*.nii.gz and sample_data\train_0001\FDG\*.nii.gz')
+        print(r'Missing sample datafiles, download and extract from https://zenodo.org/records/18150034')
+        print(r'Direct link: https://zenodo.org/records/18150034/files/train_0001.zip?download=1')
+        print(r'Image data should be located in sample_data\train_0001\PSMA\*.nii.gz and sample_data\train_0001\FDG\*.nii.gz')
         sys.exit()
         #sdownload_sample_data() #to be updated...
 
-    ttb=run_gtrc_infer(pt_fname,ct_fname,tracer='psma_pet',output_fname=r"sample_data\psma_ttb.nii.gz",
+    ttb=run_gtrc_infer(pt_fname,ct_fname,tracer='psma_pet',output_fname=r"sample_data/psma_ttb.nii.gz",
                        return_ttb_sitk=True,
                        fold='all',suv_threshold=suv_threshold)
 
-    ct_fname=r"sample_data\train_0001\FDG\CT.nii.gz"
-    pt_fname=r"sample_data\train_0001\FDG\PET.nii.gz"
+    ct_fname=r"sample_data/train_0001/FDG/CT.nii.gz"
+    pt_fname=r"sample_data/train_0001/FDG/PET.nii.gz"
     suv_threshold=2.9650267106980
 
-    ttb=run_gtrc_infer(pt_fname,ct_fname,tracer='fdg_pet',output_fname=r"sample_data\fdg_ttb.nii.gz",
+    ttb=run_gtrc_infer(pt_fname,ct_fname,tracer='fdg_pet',output_fname=r"sample_data/fdg_ttb.nii.gz",
                        return_ttb_sitk=True,
                        fold='all',suv_threshold=suv_threshold)
